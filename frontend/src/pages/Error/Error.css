@@ -1,0 +1,17 @@
+.Error {
+  display: flex;
+  flex-direction: column;
+}
+.Error h1 {
+  font-size: 280px;
+  color: #ff6060;
+  margin: 110px 0;
+}
+.Error p {
+  color: #ff6060;
+  margin: 110px 0;
+}
+.Error a {
+  color: black;
+  margin-bottom: 110px;
+}

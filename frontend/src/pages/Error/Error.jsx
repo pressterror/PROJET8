@@ -1,8 +1,13 @@
+import { Link } from "react-router";
+import "./Error.css";
+
 function Error() {
   return (
-    <div>
-      <h1>Page introuvable</h1>
-    </div>
+    <main className="Error">
+      <h1>404</h1>
+      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <Link to="/">Retourner sur la page d'accueil</Link>
+    </main>
   );
 }
 

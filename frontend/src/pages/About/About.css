@@ -1,0 +1,43 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.Collapse {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 200px;
+  margin-bottom: 30px;
+}
+
+.Collapse img {
+  justify-content: center;
+  align-items: center;
+}
+.Collapse-content {
+  margin: 0 10px;
+  font-size: 14px;
+  color: black;
+  text-align: left;
+  padding-bottom: 30px;
+  font-weight: 500;
+}
+.Collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.Collapse-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.Collapse-header img {
+  transition: transform 300ms ease;
+}
+
+.Collapse-header img.open {
+  transform: rotate(180deg);
+}
