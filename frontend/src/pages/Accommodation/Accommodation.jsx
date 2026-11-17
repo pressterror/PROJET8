@@ -40,7 +40,7 @@ function Accommodation() {
   return (
     <main>
       <Slideshow className="Slideshow" pictures={property.pictures} />
-      <div>
+      <div className="details">
         <div className="info">
           <div className="intro">
             <h1>{property.title}</h1>

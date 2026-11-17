@@ -8,7 +8,11 @@ function Footer() {
       <Link to="/">
         <img src={footer} alt="Kasa - Accueil" />
       </Link>
-      <p>© 2020 Kasa. All rights reserved</p>
+      <p>
+        © 2020 Kasa. All
+        <br className="mobile-break" />
+        rights reserved
+      </p>
     </div>
   );
 }

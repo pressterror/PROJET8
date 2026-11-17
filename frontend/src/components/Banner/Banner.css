@@ -14,6 +14,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border: 1px solid black;
 }
 
 .home-banner::before {
@@ -34,4 +35,25 @@
   font-size: 40px;
   font-weight: 700;
   z-index: 2;
+}
+.mobile-break {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    margin: 25px 20px 0 20px;
+    border-radius: 10px;
+  }
+  .banner p {
+    font-size: 24px;
+    text-align: left;
+    margin-right: 80px;
+  }
+  .banner img {
+    width: 100%;
+    height: 111px;
+  }
+  .mobile-break {
+    display: block;
+  }
 }

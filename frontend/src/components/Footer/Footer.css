@@ -14,3 +14,12 @@
 .Footer img {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .Footer p {
+    font-size: 14px;
+  }
+  .Footer {
+    gap: 15px;
+    margin-top: 25px;
+  }
+}

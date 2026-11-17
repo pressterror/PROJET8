@@ -49,3 +49,19 @@
 article:hover {
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .card-gallery {
+    margin: 22px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .card-gallery article {
+    width: 100%;
+    height: 200px;
+  }
+}

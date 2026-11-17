@@ -13,7 +13,13 @@ function Home() {
     <>
       <Banner
         image={banner}
-        title="Chez vous, partout et ailleurs"
+        title={
+          <>
+            Chez vous,
+            <br className="mobile-break" />
+            partout et ailleurs
+          </>
+        }
         className="home-banner banner"
       />
       <div className="card-gallery">

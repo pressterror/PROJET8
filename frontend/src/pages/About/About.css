@@ -58,3 +58,31 @@
 .about-banner::before {
   background: rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 768px) {
+  .about .Collapse {
+    margin: 0 20px;
+    width: auto;
+  }
+  .Collapse-header {
+    padding: 5px 5px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .Collapse-header h2 {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .Collapse img {
+    width: 30px;
+    height: 20px;
+  }
+  .Collapse-content {
+    font-size: 10px;
+  }
+  .about-banner {
+    margin-bottom: 20px;
+  }
+  .banner {
+    margin: 10px 20px;
+  }
+}
