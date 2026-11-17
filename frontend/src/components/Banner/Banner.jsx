@@ -1,12 +1,12 @@
-import banner from "../../assets/banner.png";
 import "./Banner.css";
 
-function Banner() {
+function Banner({ image, title, className }) {
   return (
-    <div className="banner">
-      <img src={banner} alt="banner - kasa" />
-      <p>Chez vous, partout et ailleurs</p>
+    <div className={`banner ${className || ""}`}>
+      <img src={image} alt="banner - kasa" />
+      {title && <p>{title}</p>}
     </div>
   );
 }
+
 export default Banner;

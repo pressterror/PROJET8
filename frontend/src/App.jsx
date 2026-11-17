@@ -24,7 +24,15 @@ function App() {
         />
 
         <Route path="/about" element={<About />} />
-        <Route path="/logement/:slug" element={<Accommodation />} />
+        <Route
+          path="/logement/:slug"
+          element={
+            <>
+              <Accommodation />
+              <Footer />
+            </>
+          }
+        />
         <Route
           path="*"
           element={

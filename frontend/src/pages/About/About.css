@@ -7,7 +7,6 @@
   justify-content: space-between;
   flex-direction: column;
   margin: 0 200px;
-  margin-bottom: 30px;
 }
 
 .Collapse img {
@@ -21,6 +20,14 @@
   text-align: left;
   padding-bottom: 30px;
   font-weight: 500;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  transition:
+    max-height 300ms ease,
+    opacity 300ms ease,
+    padding 300ms ease;
 }
 .Collapse-header {
   display: flex;
@@ -29,6 +36,7 @@
   background-color: #ff6060;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-bottom: 30px;
 }
 .Collapse-header h2 {
   font-size: 24px;
@@ -39,5 +47,14 @@
 }
 
 .Collapse-header img.open {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
+}
+.Collapse-content.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding-bottom: 30px;
+}
+
+.about-banner::before {
+  background: rgba(0, 0, 0, 0.3);
 }

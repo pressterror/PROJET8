@@ -12,13 +12,17 @@ function Slideshow({ pictures }) {
   }
   return (
     <div className="Slideshow">
-      <button onClick={previousPicture}>
+      <button className="arrow left" onClick={previousPicture}>
         <img src={leftArrow} alt="Précédent" />
       </button>
 
-      <img src={pictures[currentPicture]} alt="Photo du logement" />
+      <img
+        className="slides"
+        src={pictures[currentPicture]}
+        alt="Photo du logement"
+      />
 
-      <button onClick={nextPicture}>
+      <button className="arrow right" onClick={nextPicture}>
         <img src={rightArrow} alt="Suivant" />
       </button>
     </div>

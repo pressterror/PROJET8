@@ -1,10 +1,11 @@
 import Collapse from "../../components/Collapse/Collapse";
 import Banner from "../../components/Banner/Banner";
 import "./About.css";
+import bannerAbout from "../../assets/banner-about.png";
 function About() {
   return (
     <>
-      <Banner />
+      <Banner image={bannerAbout} title="" className="about-banner banner" />
       <div className="about">
         <Collapse title="Fiabilité">
           <p>

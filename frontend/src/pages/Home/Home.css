@@ -1,13 +1,18 @@
 .card-gallery {
   margin: 0 100px;
-  height: 740px;
+  height: 620px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: 340px;
-  gap: 60px;
+  column-gap: 60px;
   overflow-y: auto;
+  background-color: #f7f7f7;
+  padding: 60px 50px;
+  border-radius: 30px;
 }
-
+.card-gallery a {
+  height: 268px;
+}
 .card-gallery article {
   position: relative;
   overflow: hidden;

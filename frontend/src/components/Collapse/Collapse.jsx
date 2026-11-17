@@ -10,10 +10,12 @@ function Collapse({ title, children }) {
     <div className="Collapse">
       <div className="Collapse-header" onClick={handleToggle}>
         <h2>{title}</h2>
-        <img src={arrow} alt="flèche" />
+        <img src={arrow} alt="flèche" className={isOpen ? "open" : ""} />
       </div>
 
-      {isOpen && <div className="Collapse-content">{children}</div>}
+      <div className={`Collapse-content ${isOpen ? "open" : ""}`}>
+        {children}
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { fetchProperties } from "../../services/properties";
 import "./Home.css";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
+import banner from "../../assets/banner.png";
 function Home() {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
@@ -10,7 +11,11 @@ function Home() {
   }, []);
   return (
     <>
-      <Banner />
+      <Banner
+        image={banner}
+        title="Chez vous, partout et ailleurs"
+        className="home-banner banner"
+      />
       <div className="card-gallery">
         {properties.map((property) => (
           <Card key={property.id} property={property} />

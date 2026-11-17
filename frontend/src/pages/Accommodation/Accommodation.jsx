@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import "./Accommodation.css";
 import { fetchProperties } from "../../services/properties";
 import Collapse from "../../components/Collapse/Collapse.jsx";
@@ -13,6 +14,7 @@ function Accommodation() {
   const [properties, setProperties] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     fetchProperties()
       .then((properties) => {
@@ -32,47 +34,55 @@ function Accommodation() {
     return <div>Une erreur est survenue.</div>;
   }
   if (!property) {
-    return <div>Logement introuvable</div>;
+    navigate("/404");
+    return null;
   }
   return (
     <main>
-      <Slideshow pictures={property.pictures} />
+      <Slideshow className="Slideshow" pictures={property.pictures} />
       <div>
-        <div>
-          <h1>{property.title}</h1>
-          <p>{property.location}</p>
+        <div className="info">
+          <div className="intro">
+            <h1>{property.title}</h1>
+            <p>{property.location}</p>
+          </div>
+          <div className="owner">
+            <span>{property.host.name}</span>
+            <img src={property.host.picture} alt={property.host.name} />
+          </div>
         </div>
-        <div>
-          <span>{property.host.name}</span>
-          <img src={property.host.picture} alt={property.host.name} />
-        </div>
-        <div>
-          <ul>
-            {property.tags.map((tag) => (
-              <li className="tags" key={tag}>
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          {[1, 2, 3, 4, 5].map((star) => (
-            <img
-              key={star}
-              src={star <= Number(property.rating) ? fullStar : emptyStar}
-              alt="étoile"
-            />
-          ))}
-        </div>
-        <Collapse title="Description">{property.description}</Collapse>
+        <div className="info2">
+          <div className="tags">
+            <ul>
+              {property.tags.map((tag) => (
+                <li className="tag" key={tag}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <Collapse title="Équipements">
-          <ul>
-            {property.equipments.map((equipment) => (
-              <li key={equipment}>{equipment}</li>
+          <div className="rating">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <img
+                key={star}
+                src={star <= Number(property.rating) ? fullStar : emptyStar}
+                alt="étoile"
+              />
             ))}
-          </ul>
-        </Collapse>
+          </div>
+        </div>
+        <div className="info3">
+          <Collapse title="Description">{property.description}</Collapse>
+
+          <Collapse title="Équipements">
+            <ul>
+              {property.equipments.map((equipment) => (
+                <li key={equipment}>{equipment}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
       </div>
     </main>
   );
