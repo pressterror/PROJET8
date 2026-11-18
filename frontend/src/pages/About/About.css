@@ -60,7 +60,8 @@
 }
 @media screen and (max-width: 768px) {
   .about .Collapse {
-    margin: 0 20px;
+    margin: 0 30px 0 20px;
+
     width: auto;
   }
   .Collapse-header {

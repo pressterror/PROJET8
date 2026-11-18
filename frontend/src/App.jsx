@@ -23,7 +23,15 @@ function App() {
           }
         />
 
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={
+            <>
+              <About />
+              <Footer />
+            </>
+          }
+        />
         <Route
           path="/logement/:slug"
           element={

@@ -38,7 +38,7 @@ function Accommodation() {
     return null;
   }
   return (
-    <main>
+    <main className="accommodation">
       <Slideshow className="Slideshow" pictures={property.pictures} />
       <div className="details">
         <div className="info">

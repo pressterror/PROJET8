@@ -59,6 +59,7 @@ article:hover {
     padding: 0;
     overflow-y: scroll;
     scrollbar-width: none;
+    padding-bottom: 25px;
   }
   .card-gallery article {
     width: 100%;
