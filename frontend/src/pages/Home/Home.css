@@ -60,6 +60,7 @@ article:hover {
     overflow-y: scroll;
     scrollbar-width: none;
     padding-bottom: 25px;
+    border-radius: 10px;
   }
   .card-gallery article {
     width: 100%;
