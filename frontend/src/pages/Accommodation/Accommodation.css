@@ -216,8 +216,11 @@
   .tags {
     margin: 0;
   }
+  .tags ul {
+    flex-wrap: wrap;
+  }
   .tag {
-    margin: 0 10px 0 0;
+    margin: 0 10px 10px 0;
     font-size: 10px;
   }
   .rating img {

@@ -47,7 +47,11 @@ function Accommodation() {
             <p>{property.location}</p>
           </div>
           <div className="owner">
-            <span>{property.host.name}</span>
+            <span>
+              {property.host.name.split(" ")[0]}
+              <br />
+              {property.host.name.split(" ")[1]}
+            </span>
             <img src={property.host.picture} alt={property.host.name} />
           </div>
         </div>

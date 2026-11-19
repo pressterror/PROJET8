@@ -23,10 +23,17 @@
     height: 47px;
   }
   .Header a {
-    font-size: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .Header a:hover {
+    text-decoration: underline;
   }
   .Header nav {
     gap: 26px;
+  }
+  .Header nav a:active {
+    text-decoration: underline;
   }
   .Header {
     margin: 20px 20px 0 20px;
