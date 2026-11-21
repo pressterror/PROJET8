@@ -5,15 +5,18 @@
 .Error h1 {
   font-size: 280px;
   color: #ff6060;
-  margin: 110px 0;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 .Error p {
+  font-size: 36px;
   color: #ff6060;
-  margin: 110px 0;
 }
 .Error a {
+  font-size: 18px;
   color: black;
-  margin-bottom: 110px;
+  margin-top: 140px;
+  margin-bottom: 140px;
 }
 @media screen and (max-width: 768px) {
   .Error h1 {

@@ -27,15 +27,17 @@ function Accommodation() {
       });
   }, []);
   const property = properties.find((property) => property.id === id);
+  useEffect(() => {
+    if (!isLoading && !error && !property) {
+      navigate("/404");
+    }
+  }, [isLoading, error, property, navigate]);
+
   if (isLoading) {
     return <div>Chargement...</div>;
   }
   if (error) {
     return <div>Une erreur est survenue.</div>;
-  }
-  if (!property) {
-    navigate("/404");
-    return null;
   }
   return (
     <main className="accommodation">

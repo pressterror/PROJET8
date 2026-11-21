@@ -5,7 +5,7 @@ import bannerAbout from "../../assets/banner-about.png";
 function About() {
   return (
     <>
-      <Banner image={bannerAbout} title="" className="about-banner banner" />
+      <Banner image={bannerAbout} title="" className="about-banner" />
       <div className="about">
         <Collapse title="Fiabilité">
           <p>
@@ -29,7 +29,7 @@ function About() {
             bienveillance.
           </p>
         </Collapse>
-        <Collapse title="Sécuriter">
+        <Collapse title="Sécurité">
           <p>
             La sécurite est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de
