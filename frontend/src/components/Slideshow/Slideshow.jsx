@@ -12,19 +12,28 @@ function Slideshow({ pictures }) {
   }
   return (
     <div className="Slideshow">
-      <button className="arrow left" onClick={previousPicture}>
-        <img src={leftArrow} alt="Précédent" />
-      </button>
+      {pictures.length > 1 && (
+        <button className="arrow left" onClick={previousPicture}>
+          <img src={leftArrow} alt="Précédent" />
+        </button>
+      )}
 
       <img
         className="slides"
         src={pictures[currentPicture]}
         alt="Photo du logement"
       />
+      {pictures.length > 1 && (
+        <span className="counter">
+          {currentPicture + 1}/{pictures.length}
+        </span>
+      )}
 
-      <button className="arrow right" onClick={nextPicture}>
-        <img src={rightArrow} alt="Suivant" />
-      </button>
+      {pictures.length > 1 && (
+        <button className="arrow right" onClick={nextPicture}>
+          <img src={rightArrow} alt="Suivant" />
+        </button>
+      )}
     </div>
   );
 }

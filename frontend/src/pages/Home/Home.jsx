@@ -15,9 +15,7 @@ function Home() {
         image={banner}
         title={
           <>
-            Chez vous,
-            <br className="mobile-break" />
-            partout et ailleurs
+            <span>Chez vous, </span> <span> partout et ailleurs</span>
           </>
         }
         className="home-banner banner"

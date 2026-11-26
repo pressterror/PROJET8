@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <>
-      <div className="Header">
+      <header className="header">
         <NavLink to="/">
           <img src={logo} alt="kasa_logo" />
         </NavLink>
@@ -13,7 +13,7 @@ function Header() {
           <NavLink to="/">Accueil</NavLink>
           <NavLink to="/about">À propos</NavLink>
         </nav>
-      </div>
+      </header>
     </>
   );
 }

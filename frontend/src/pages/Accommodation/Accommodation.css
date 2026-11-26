@@ -27,6 +27,15 @@
 .arrow.right {
   right: 20px;
 }
+.counter {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+}
 /*** intro ***/
 .intro {
   display: flex;
@@ -57,13 +66,14 @@
   height: 64px;
   border-radius: 50%;
 }
-.owner span {
+.owner p {
   color: #ff6060;
   font-size: 18px;
   font-weight: 500;
   text-align: right;
   max-width: 97px;
   margin-right: 10px;
+  word-spacing: 100vw;
 }
 .info {
   display: flex;
@@ -128,8 +138,9 @@
 .Collapse {
   margin: 0;
 }
-.Collapse-content ul {
+.accommodation .Collapse-content ul {
   margin: 0;
+  padding: 20px 20px 0 20px;
 }
 .Collapse-content li {
   list-style: none;
@@ -137,7 +148,12 @@
   margin: 0;
   font-size: 20px;
 }
-.Collapse-content.open {
+.accommodation .Collapse-content.open:has(ul) {
+  padding-top: 0;
+  font-weight: 400;
+}
+.accommodation .Collapse-content.open {
+  font-weight: 400;
   font-size: 20px;
 }
 .details {
@@ -197,6 +213,9 @@
   }
   .arrow.right {
     right: 0;
+  }
+  .counter {
+    display: none;
   }
   .intro {
     margin: 15px 0 0;
@@ -268,5 +287,27 @@
   }
   .accommodation .Collapse-header {
     padding: 5px 0;
+  }
+  .accommodation .Collapse-header h2 {
+    margin-left: 10px;
+  }
+  .accommodation .Collapse-header img {
+    margin-right: 10px;
+  }
+  .accommodation .Collapse-content.open {
+    padding-top: 13px;
+    font-size: 12px;
+  }
+  .Collapse-content li {
+    font-size: 12px;
+  }
+  .accommodation .Collapse-content ul {
+    padding-top: 13px;
+  }
+  .accommodation .Collapse + .Collapse {
+    margin-top: 20px;
+  }
+  .accommodation .Collapse:last-child {
+    margin-bottom: 25px;
   }
 }

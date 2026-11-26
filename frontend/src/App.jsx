@@ -12,45 +12,16 @@ function App() {
     <>
       <Header />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-              <Footer />
-            </>
-          }
-        />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/logement/:slug" element={<Accommodation />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
 
-        <Route
-          path="/about"
-          element={
-            <>
-              <About />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/logement/:slug"
-          element={
-            <>
-              <Accommodation />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <>
-              <Error />
-              <Footer />
-            </>
-          }
-        />
-      </Routes>
+      <Footer />
     </>
   );
 }

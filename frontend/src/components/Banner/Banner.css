@@ -16,13 +16,18 @@
   object-fit: cover;
   border: 1px solid black;
 }
-
+.home-banner .banner-title span {
+  display: inline;
+}
 .home-banner::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
   z-index: 1;
+}
+.home-banner .banner-title span + span {
+  margin-left: 12px;
 }
 
 .banner p {
@@ -36,15 +41,18 @@
   font-weight: 700;
   z-index: 2;
 }
-.mobile-break {
-  display: none;
-}
+
 @media screen and (max-width: 768px) {
   .banner {
     margin: 25px 20px 0 20px;
     border-radius: 10px;
   }
   .banner p {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+  }
+  .banner span {
     font-size: 24px;
     text-align: left;
     margin-right: 80px;
@@ -54,8 +62,11 @@
     height: 111px;
     transform: scale(1.7);
   }
-  .mobile-break {
+  .home-banner .banner-title span {
     display: block;
+  }
+  .home-banner .banner-title span + span {
+    margin-left: 0px;
   }
 }
 /*npm run coverage

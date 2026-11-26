@@ -1,14 +1,14 @@
-.Header {
+.header {
   display: flex;
   justify-content: space-between;
   margin: 45px 100px 0 100px;
 }
-.Header nav {
+.header nav {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.Header a {
+.header a {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -20,11 +20,11 @@ nav a.active {
 }
 
 @media screen and (max-width: 768px) {
-  .Header img {
+  .header img {
     width: 145px;
     height: 47px;
   }
-  .Header a {
+  .header a {
     font-size: 12px;
     text-transform: uppercase;
   }
@@ -33,11 +33,11 @@ nav a.active {
   nav a.active {
     text-decoration: underline;
   }
-  .Header nav {
+  .header nav {
     gap: 26px;
   }
 
-  .Header {
+  .header {
     margin: 20px 20px 0 20px;
   }
 }

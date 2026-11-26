@@ -1,4 +1,4 @@
-.Footer {
+.footer {
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -7,19 +7,20 @@
   align-items: center;
   gap: 28px;
 }
-.Footer p {
+.footer p {
   font-size: 24px;
   color: white;
   font-weight: 500;
 }
-.Footer img {
+.footer img {
   display: block;
 }
 @media screen and (max-width: 768px) {
-  .Footer p {
+  .footer p {
     font-size: 14px;
+    max-width: 120px;
   }
-  .Footer {
+  .footer {
     gap: 15px;
     margin-top: 25px;
   }

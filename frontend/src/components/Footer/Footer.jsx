@@ -4,16 +4,12 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="Footer">
+    <footer className="footer">
       <Link to="/">
         <img src={footer} alt="Kasa - Accueil" />
       </Link>
-      <p>
-        © 2020 Kasa. All
-        <br className="mobile-break" />
-        rights reserved
-      </p>
-    </div>
+      <p>© 2020 Kasa. All rights reserved</p>
+    </footer>
   );
 }
 export default Footer;

@@ -6,11 +6,11 @@ import { fetchProperties } from "../../services/properties";
 import Collapse from "../../components/Collapse/Collapse.jsx";
 import fullStar from "../../assets/full-star.svg";
 import emptyStar from "../../assets/empty-star.svg";
+import { generateSlug } from "../../utils/slug";
 
 import Slideshow from "../../components/Slideshow/Slideshow";
 function Accommodation() {
   const { slug } = useParams();
-  const id = slug.split("-").at(-1);
   const [properties, setProperties] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -26,7 +26,9 @@ function Accommodation() {
         setIsLoading(false);
       });
   }, []);
-  const property = properties.find((property) => property.id === id);
+  const property = properties.find(
+    (property) => generateSlug(property.title, property.id) === slug,
+  );
   useEffect(() => {
     if (!isLoading && !error && !property) {
       navigate("/404");
@@ -39,6 +41,9 @@ function Accommodation() {
   if (error) {
     return <div>Une erreur est survenue.</div>;
   }
+  if (!property) {
+    return null;
+  }
   return (
     <main className="accommodation">
       <Slideshow className="Slideshow" pictures={property.pictures} />
@@ -49,11 +54,7 @@ function Accommodation() {
             <p>{property.location}</p>
           </div>
           <div className="owner">
-            <span>
-              {property.host.name.split(" ")[0]}
-              <br />
-              {property.host.name.split(" ")[1]}
-            </span>
+            <p>{property.host.name}</p>
             <img src={property.host.picture} alt={property.host.name} />
           </div>
         </div>
